@@ -22,7 +22,10 @@ public class Shoot : MonoBehaviour
         {
             GameObject bulletobj = Instantiate(bullet, bulletPosOrigin.transform.position, transform.rotation);
             bulletobj.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, 20));
+            Destroy(bulletobj, 5);
         }
         
     }
+
+     
 }
